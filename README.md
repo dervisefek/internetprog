@@ -51,18 +51,87 @@
 - `border: 1px solid black;`: Kenarlık özelliklerini belirler, `1px` kalınlık, `solid` stil ve `black` renk.
 - `border-radius: 10px;`: Kenarlık köşelerini yuvarlar, `10px` yarıçap.
 
+#### Örnek:
+
+```html
+<div class="border-example">Kenarlık Örneği</div>
+```
+
+```css
+.border-example {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+```
+
+#### Çıktı:
+
+<div class="border-example">Kenarlık Örneği</div>
+
 ### Renklendirme
 
 - `color: #333;`: Metin rengini belirler, `#333` renk kodu.
 - `background-color: #f0f0f0;`: Arka plan rengini belirler, `#f0f0f0` renk kodu.
 
+#### Örnek:
+
+```html
+<div class="color-example">Renklendirme Örneği</div>
+```
+
+```css
+.color-example {
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+```
+
+#### Çıktı:
+
+<div class="color-example">Renklendirme Örneği</div>
+
 ### Class Kullanımı
 
 - `.className { font-size: 16px; margin: 10px; }`: CSS sınıfı tanımlar ve HTML öğelerine uygulanır, `font-size` ile yazı boyutu, `margin` ile dış boşluk belirlenir.
 
+#### Örnek:
+
+```html
+<div class="class-example">Class Kullanımı Örneği</div>
+```
+
+```css
+.class-example {
+  font-size: 16px;
+  margin: 10px;
+}
+```
+
+#### Çıktı:
+
+<div class="class-example">Class Kullanımı Örneği</div>
+
 ### Hover Özelliği
 
 - `a:hover { text-decoration: underline; }`: Fare ile üzerine gelindiğinde uygulanacak stilleri belirler, `text-decoration` ile alt çizgi eklenir. Bu özellik, kullanıcıların fare ile bir bağlantının üzerine geldiğinde görsel bir geri bildirim almasını sağlar.
+
+#### Örnek:
+
+```html
+<a href="#" class="hover-example">Hover Örneği</a>
+```
+
+```css
+.hover-example:hover {
+  text-decoration: underline;
+}
+```
+
+#### Çıktı:
+
+<a href="#" class="hover-example">Hover Örneği</a>
 
 ## HTML ve CSS Bağlantısı
 
@@ -394,29 +463,40 @@
 - `opacity`: Saydamlık.
 - `transition`: Geçiş efekti.
 - `transform`: Dönüşüm.
-  ```css
-  .ornek {
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid black;
-    background: #f0f0f0;
-    color: #333;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    display: block;
-    position: relative;
-    top: 10px;
-    right: 20px;
-    width: 100px;
-    height: 50px;
-    max-width: 200px;
-    min-width: 50px;
-    opacity: 0.8;
-    transition: all 0.3s ease;
-    transform: rotate(10deg);
-  }
-  ```
+
+#### Örnekler:
+
+```html
+<div class="css-example">CSS Özellikleri Örneği</div>
+```
+
+```css
+.css-example {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid black;
+  background: #f0f0f0;
+  color: #333;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: block;
+  position: relative;
+  top: 10px;
+  right: 20px;
+  width: 100px;
+  height: 50px;
+  max-width: 200px;
+  min-width: 50px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  transform: rotate(10deg);
+}
+```
+
+#### Çıktı:
+
+<div class="css-example">CSS Özellikleri Örneği</div>
 
 ### Navigasyon Menüsü
 
@@ -430,4 +510,103 @@
     </ul>
   </nav>
   ```
+
+#### Örnek:
+
+```html
+<div id="yanMenu">
+  <ul>
+    <li><a href="#">AnaSayfa</a></li>
+    <li><a href="#">Hakkımızda</a>
+      <ul>
+        <li><a href="#">Kısa Özgeçmiş</a></li>
+        <li><a href="#">Misyonumuz</a></li>
+        <li><a href="#">Vizyonumuz</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Ürünlerimiz</a></li>
+    <li><a href="#">Kullanıcılar</a>
+      <ul>
+        <li><a href="#">Kullanıcı Deneyimleri</a></li>
+        <li><a href="#">Kullanıcı Önerileri</a></li>
+        <li><a href="#">Kullanıcılarla İletişim</a></li>
+      </ul>
+    </li>
+    <li><a href="#">İletişim</a></li>
+    <div style="clear:both"></div>
+  </ul>
+</div>
+```
+
+```css
+#yanMenu {
+  padding: 0px;
+}
+
+#yanMenu ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+#yanMenu li {
+  float: left;
+  position: relative;
+  width: 150px;
+}
+
+#yanMenu li ul {
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 29px;
+}
+
+#yanMenu ul li a {
+  background-color: pink;
+  border: 1px solid red;
+  color: red;
+  font-weight: bold;
+  display: block;
+  margin: 0px;
+  padding: 2px;
+  text-decoration: none;
+  line-height: 24px;
+  text-align: center;
+}
+
+#yanMenu ul li a:hover {
+  background-color: white;
+  color: gray;
+}
+
+#yanMenu li:hover ul {
+  display: block;
+}
+```
+
+#### Çıktı:
+
+<div id="yanMenu">
+  <ul>
+    <li><a href="#">AnaSayfa</a></li>
+    <li><a href="#">Hakkımızda</a>
+      <ul>
+        <li><a href="#">Kısa Özgeçmiş</a></li>
+        <li><a href="#">Misyonumuz</a></li>
+        <li><a href="#">Vizyonumuz</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Ürünlerimiz</a></li>
+    <li><a href="#">Kullanıcılar</a>
+      <ul>
+        <li><a href="#">Kullanıcı Deneyimleri</a></li>
+        <li><a href="#">Kullanıcı Önerileri</a></li>
+        <li><a href="#">Kullanıcılarla İletişim</a></li>
+      </ul>
+    </li>
+    <li><a href="#">İletişim</a></li>
+    <div style="clear:both"></div>
+  </ul>
+</div>
 
