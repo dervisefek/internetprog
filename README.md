@@ -25,24 +25,22 @@
 
 - `<table border="1" cellpadding="10" cellspacing="0">`: Tablo oluşturur, `border` parametresi ile kenarlık kalınlığı, `cellpadding` parametresi ile hücre içi boşluk, `cellspacing` parametresi ile hücreler arası boşluk belirlenir.
 - `<tr>`: Tablo satırı oluşturur.
-- `<td align="center" valign="middle">`: Tablo hücresi oluşturur, `align` parametresi ile yatay hizalama, `valign` parametresi ile dikey hizalama belirlenir.
+- `<td align="center">`: Tablo hücresi oluşturur, `align` parametresi ile yatay hizalama belirlenir.
 - `<th>`: Tablo başlık hücresi oluşturur.
 - `<caption>`: Tabloya başlık ekler, genellikle tablonun üstünde yer alır ve tablonun içeriğini açıklar.
 - `<colgroup span="2">`: Tablo sütunlarını gruplar ve sütunlara stil veya özellikler ekler, `span` parametresi ile gruptaki sütun sayısı belirlenir.
 - `<col span="2" style="background-color: #f2f2f2;">`: Tek bir tablo sütununa stil veya özellikler ekler, `span` parametresi ile sütun sayısı, `style` parametresi ile CSS stilleri belirlenir.
-- `<tr>`: Tablo satırı oluşturur.
-- `<td colspan="2" rowspan="2" align="center" >`: Tablo hücresi oluşturur, `colspan` parametresi ile hücrenin kapladığı sütun sayısı, `rowspan` parametresi ile hücrenin kapladığı satır sayısı, `align` parametresi ile yatay hizalama.
-- `<th rowspan="2">`: Tablo başlık hücresi oluşturur, `rowspan` parametresi ile hücrenin kapladığı satır sayısı belirlenir.
+- `<td colspan="2" rowspan="2" align="center">`: Tablo hücresi oluşturur, `colspan` parametresi ile hücrenin kapladığı sütun sayısı, `rowspan` parametresi ile hücrenin kapladığı satır sayısı, `align` parametresi ile yatay hizalama belirlenir.
 
 ### Listeleme
 
-- `<ul>`: Sırasız liste oluşturur.
-- `<ol>`: Sıralı liste oluşturur.
+- `<ul class="circle-list">`: Sırasız liste oluşturur.
+- `<ol class="roman-list" start="3">`: Sıralı liste oluşturur, `start` parametresi ile başlangıç numarası belirlenir.
 - `<li>`: Liste öğesi oluşturur.
 
 ### Form
 
-- `<form action="/submit" method="post">`: Form oluşturur, `action` parametresi ile formun gönderileceği adres, `method` parametresi ile gönderim yöntemi.
+- `<form action="/submit">`: Form oluşturur, `action` parametresi ile formun gönderileceği adres belirlenir.
 - `<input type="text" name="isim" placeholder="İsminizi girin" required>`: Kullanıcıdan veri almak için giriş alanı oluşturur, `type` parametresi ile giriş türü, `name` parametresi ile alan adı, `placeholder` parametresi ile örnek metin, `required` parametresi ile zorunlu alan belirlenir.
 - `<button type="submit" disabled>Gönder</button>`: Buton oluşturur, `type` parametresi ile buton türü, `disabled` parametresi ile butonun devre dışı bırakılması sağlanır.
 
@@ -64,7 +62,7 @@
 
 ### Hover Özelliği
 
-- `a:hover { text-decoration: underline; }`: Fare ile üzerine gelindiğinde uygulanacak stilleri belirler, `text-decoration` ile alt çizgi eklenir.
+- `a:hover { text-decoration: underline; }`: Fare ile üzerine gelindiğinde uygulanacak stilleri belirler, `text-decoration` ile alt çizgi eklenir. Bu özellik, kullanıcıların fare ile bir bağlantının üzerine geldiğinde görsel bir geri bildirim almasını sağlar.
 
 ## HTML ve CSS Bağlantısı
 
@@ -91,15 +89,26 @@
 ### Listeleme Örneği
 
 ```html
-<ul class="sirasiz-liste">
+<ul class="circle-list">
   <li>Öğe 1</li>
   <li>Öğe 2</li>
 </ul>
-<ol class="sirali-liste">
+<ol class="roman-list" start="3">
   <li>Öğe 1</li>
   <li>Öğe 2</li>
 </ol>
 ```
+
+#### Çıktı:
+
+<ul class="circle-list">
+  <li>Öğe 1</li>
+  <li>Öğe 2</li>
+</ul>
+<ol class="roman-list" start="3">
+  <li>Öğe 1</li>
+  <li>Öğe 2</li>
+</ol>
 
 ### Tablo ve Form Örneği
 
@@ -113,26 +122,67 @@
     <td>Ali</td>
     <td>Veli</td>
   </tr>
+  <tr>
+    <td colspan="2">
+      <form action="/submit">
+        <label for="isim">İsim:</label>
+        <input
+          type="text"
+          id="isim"
+          name="isim"
+          placeholder="İsminizi girin"
+          required
+        />
+        <button type="submit">Gönder</button>
+      </form>
+    </td>
+  </tr>
 </table>
-<form action="/submit" method="post">
-  <label for="isim">İsim:</label>
-  <input
-    type="text"
-    id="isim"
-    name="isim"
-    placeholder="İsminizi girin"
-    required
-  />
-  <button type="submit">Gönder</button>
-</form>
 ```
+
+#### Çıktı:
+
+<table border="1" cellpadding="10" cellspacing="0">
+  <tr>
+    <th>Ad</th>
+    <th>Soyad</th>
+  </tr>
+  <tr>
+    <td>Ali</td>
+    <td>Veli</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <form action="/submit">
+        <label for="isim">İsim:</label>
+        <input
+          type="text"
+          id="isim"
+          name="isim"
+          placeholder="İsminizi girin"
+          required
+        />
+        <button type="submit">Gönder</button>
+      </form>
+    </td>
+  </tr>
+</table>
 
 ### CSS Örneği
 
 ```css
+.circle-list {
+  list-style-type: circle;
+}
+
+.roman-list {
+  list-style-type: upper-roman;
+}
+
 .sirasiz-liste li:hover {
   color: red;
 }
+
 .sirali-liste li:hover {
   color: blue;
 }
@@ -213,6 +263,7 @@
   <i>İtalik</i>
   <u>Altı çizili</u>
   <strong>Vurgulu kalın</strong>
+  <em>Vurgulu italik</em>
   <mark>Vurgulu arka plan</mark>
   <small>Küçük</small>
   <del>Üstü çizili</del>
@@ -230,7 +281,7 @@
 
 ### Form Etiketleri
 
-- `<form action="/submit" method="post">`: Form oluşturur.
+- `<form action="/submit">`: Form oluşturur.
 - `<input type="text" name="isim" placeholder="İsminizi girin" required>`: Metin girişi.
 - `<input type="password" name="sifre" placeholder="Şifrenizi girin" required>`: Şifre girişi.
 - `<input type="email" name="email" placeholder="Email adresinizi girin" required>`: Email girişi.
@@ -247,7 +298,7 @@
 - `<button type="submit">Gönder</button>`: Gönder butonu.
 - `<button type="reset">Temizle</button>`: Temizle butonu.
   ```html
-  <form action="/submit" method="post">
+  <form action="/submit">
     <input type="text" name="isim" placeholder="İsminizi girin" required />
     <input
       type="password"
@@ -286,6 +337,7 @@
 ### HTML5 Temel Özellikleri ve Yeni Gelen Özellikler
 
 - `<article>`: Bağımsız içerik parçası.
+- `<aside>`: Yan içerik.
 - `<details>`: Gizlenebilir içerik.
 - `<figcaption>`: Resim alt yazısı.
 - `<figure>`: Resim ve alt yazı grubu.
@@ -378,3 +430,4 @@
     </ul>
   </nav>
   ```
+
