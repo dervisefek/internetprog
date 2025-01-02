@@ -26,18 +26,18 @@
 - `<table border="1" cellpadding="10" cellspacing="0">`: Tablo oluşturur, `border` parametresi ile kenarlık kalınlığı, `cellpadding` parametresi ile hücre içi boşluk, `cellspacing` parametresi ile hücreler arası boşluk belirlenir.
 - `<tr>`: Tablo satırı oluşturur.
 - `<td align="center" valign="middle">`: Tablo hücresi oluşturur, `align` parametresi ile yatay hizalama, `valign` parametresi ile dikey hizalama belirlenir.
-- `<th scope="col">`: Tablo başlık hücresi oluşturur, `scope` parametresi ile başlığın sütun veya satır için geçerli olduğu belirtilir.
+- `<th>`: Tablo başlık hücresi oluşturur.
 - `<caption>`: Tabloya başlık ekler, genellikle tablonun üstünde yer alır ve tablonun içeriğini açıklar.
 - `<colgroup span="2">`: Tablo sütunlarını gruplar ve sütunlara stil veya özellikler ekler, `span` parametresi ile gruptaki sütun sayısı belirlenir.
 - `<col span="2" style="background-color: #f2f2f2;">`: Tek bir tablo sütununa stil veya özellikler ekler, `span` parametresi ile sütun sayısı, `style` parametresi ile CSS stilleri belirlenir.
 - `<tr>`: Tablo satırı oluşturur.
-- `<td colspan="2" rowspan="2" align="center" valign="middle">`: Tablo hücresi oluşturur, `colspan` parametresi ile hücrenin kapladığı sütun sayısı, `rowspan` parametresi ile hücrenin kapladığı satır sayısı, `align` parametresi ile yatay hizalama, `valign` parametresi ile dikey hizalama belirlenir.
-- `<th scope="col" rowspan="2">`: Tablo başlık hücresi oluşturur, `scope` parametresi ile başlığın sütun veya satır için geçerli olduğu, `rowspan` parametresi ile hücrenin kapladığı satır sayısı belirlenir.
+- `<td colspan="2" rowspan="2" align="center" >`: Tablo hücresi oluşturur, `colspan` parametresi ile hücrenin kapladığı sütun sayısı, `rowspan` parametresi ile hücrenin kapladığı satır sayısı, `align` parametresi ile yatay hizalama.
+- `<th rowspan="2">`: Tablo başlık hücresi oluşturur, `rowspan` parametresi ile hücrenin kapladığı satır sayısı belirlenir.
 
 ### Listeleme
 
-- `<ul type="circle">`: Sırasız liste oluşturur, `type` parametresi ile madde işareti tipi belirlenir.
-- `<ol type="I" start="3">`: Sıralı liste oluşturur, `type` parametresi ile numaralandırma tipi, `start` parametresi ile başlangıç numarası belirlenir.
+- `<ul>`: Sırasız liste oluşturur.
+- `<ol>`: Sıralı liste oluşturur.
 - `<li>`: Liste öğesi oluşturur.
 
 ### Form
@@ -213,7 +213,6 @@
   <i>İtalik</i>
   <u>Altı çizili</u>
   <strong>Vurgulu kalın</strong>
-  <em>Vurgulu italik</em>
   <mark>Vurgulu arka plan</mark>
   <small>Küçük</small>
   <del>Üstü çizili</del>
@@ -287,7 +286,6 @@
 ### HTML5 Temel Özellikleri ve Yeni Gelen Özellikler
 
 - `<article>`: Bağımsız içerik parçası.
-- `<aside>`: Yan içerik.
 - `<details>`: Gizlenebilir içerik.
 - `<figcaption>`: Resim alt yazısı.
 - `<figure>`: Resim ve alt yazı grubu.
